@@ -1,0 +1,17 @@
+#intro{
+    background: url(https://www.ecopetit.cat/wpic/mpic/54-548046_1920x1080-beautiful-blackboard-wallpapers-faded-black-background-hd.jpg);
+}
+
+img{
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    height: auto;
+}
+
+hr{
+    height: 3px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to left, black, white);
+}
