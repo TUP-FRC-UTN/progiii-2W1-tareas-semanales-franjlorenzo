@@ -39,7 +39,7 @@ namespace ABM_Persona.AccesoDeDatos
                             auxiliar.Apellido = lector["apellido"].ToString();
                             auxiliar.Telefono = lector["telefono"].ToString();
                             auxiliar.Edad = int.Parse(lector["edad"].ToString());
-                            auxiliar.IdSexo = int.Parse(lector["idSexo"].ToString()); //ESTO PARA VIEWMODEL
+                            //auxiliar.IdSexo = int.Parse(lector["idSexo"].ToString()); //ESTO PARA VIEWMODEL
 
                             listaPersona.Add(auxiliar);
                         }

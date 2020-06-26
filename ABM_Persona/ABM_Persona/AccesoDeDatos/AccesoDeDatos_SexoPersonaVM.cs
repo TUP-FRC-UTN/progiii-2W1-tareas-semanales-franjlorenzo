@@ -34,7 +34,7 @@ namespace ABM_Persona.AccesoDeDatos
                     while (lector.Read())
                     {
                         SexoItemVM auxiliar = new SexoItemVM();
-                        auxiliar.IdSexo = int.Parse(lector["idSexo"].ToString());
+                        auxiliar.IdSexo = int.Parse(lector["id"].ToString());
                         auxiliar.Nombre = lector["nombre"].ToString();
 
                         listaSexos.Add(auxiliar);

@@ -1,0 +1,104 @@
+﻿@model ABM_Persona.ViewModels.Reportes.ReporteVM
+@{
+    ViewBag.Title = "Reportes por sexo";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h4>Reportes</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="col-sm-12">
+            <div>
+                <h4>Personas por sexo</h4>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        Sexo
+                    </th>
+                    <th class="text-center">
+                        Cantidad
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var listaSexo in Model.ListaSexos)
+                {
+                    <tr class="text-center">
+                        <td>
+                            @listaSexo.Nombre
+                        </td>
+                        <td>
+                            @listaSexo.Cantidad
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6">
+        <div class="col-sm-12">
+            <div>
+                <h4>Listado de personas</h4>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        Nombre
+                    </th>
+                    <th class="text-center">
+                        Apellido
+                    </th>
+                    <th class="text-center">
+                        Telefono
+                    </th>
+                    <th class="text-center">
+                        Edad
+                    </th>
+                    <th class="text-center">
+                        Sexo
+                    </th>
+                    <th class="text-center">
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var persona in Model.ListaPersonas)
+                {
+                <tr class="text-center">
+                    <td>
+                        @persona.Nombre
+                    </td>
+                    <td>
+                        @persona.Apellido
+                    </td>
+                    <td>
+                        @persona.Telefono
+                    </td>
+                    <td>
+                        @persona.Edad
+                    </td>
+                    <td>
+                        @persona.SexoNombre
+                    </td>
+                    <th class="text-center">
+                        <a href="@Url.Action("EliminarPersona", "EliminarPersona", new {@idPersona = persona.Id})" class="btn btn-danger">Eliminar</a>
+                    </th>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

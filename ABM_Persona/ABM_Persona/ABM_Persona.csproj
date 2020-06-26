@@ -120,6 +120,7 @@
     <Compile Include="AccesoDeDatos\AccesoDatos_EliminarPersona.cs" />
     <Compile Include="AccesoDeDatos\AccesoDatos_Persona.cs" />
     <Compile Include="AccesoDeDatos\AccesoDatos_PersonaListado.cs" />
+    <Compile Include="AccesoDeDatos\AccesoDatos_Reportes.cs" />
     <Compile Include="AccesoDeDatos\AccesoDeDatos_SexoPersonaVM.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -128,11 +129,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListadoPersonaController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PersonaItemVM.cs" />
+    <Compile Include="ViewModels\Reportes\ReporteVM.cs" />
     <Compile Include="ViewModels\SexoItemVM.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +176,7 @@
     <Content Include="Views\Persona\CargarNuevaPersona.cshtml" />
     <Content Include="Views\ListadoPersona\ListadoPersona.cshtml" />
     <Content Include="Views\EliminarPersona\EliminarPersona.cshtml" />
+    <Content Include="Views\Reporte\ReportePersona.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
