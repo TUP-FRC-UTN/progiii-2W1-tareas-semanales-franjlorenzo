@@ -12,13 +12,7 @@ namespace NegocioInstrumentosMVC.Controllers
         // GET: Instrumento
         public ActionResult ListadoInstrumentos()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult ListadoDeInstrumentos()
-        {
-            List<Instrumento> listaInstrumentos = AccesoDeDatos.AD_Instrumento.ObtenerListadoInstrumentos();
+            List<Instrumento> listaInstrumentos = AccesoDeDatos.AD_ListadoInstrumento.ObtenerListadoInstrumentos();
             return View(listaInstrumentos);
         }
     }

@@ -1,0 +1,59 @@
+﻿@model NegocioInstrumentosMVC.ViewModels.ReporteVM
+@{
+    ViewBag.Title = "Reporte de instrumentos";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h4>Reportes</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="col-sm-12">
+            <div>
+                <h4>Instrumentos de percusion ordenados por precio</h4>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        Nombre del instrumento
+                    </th>
+                    <th class="text-center">
+                        Descripcion
+                    </th>
+                    <th class="text-center">
+                        Stock
+                    </th>
+                    <th class="text-center">
+                        Precio
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var listaInstrumento in Model.ListaInstrumentos)
+                {
+                <tr class="text-center">
+                    <td>
+                        @listaInstrumento.Nombre
+                    </td>
+                    <td>
+                        @listaInstrumento.Descripcion
+                    </td>
+                    <td>
+                        @listaInstrumento.Stock
+                    </td>
+                    <td>
+                        @listaInstrumento.Precio
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

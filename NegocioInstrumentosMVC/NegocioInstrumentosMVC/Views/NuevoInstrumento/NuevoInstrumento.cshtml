@@ -1,0 +1,61 @@
+﻿@model NegocioInstrumentosMVC.Models.Instrumento
+@{
+    ViewBag.Title = "NuevoInstrumento";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items; //Creamos una lista de items con lo que le pasamos desde el controlador
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h4>Cargar nuevo instrumento</h4>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Instrumento</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.pNombre, htmlAttributes: new { @class = "form-control", id = "txtNombre" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Descripcion</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.pDescripcion, htmlAttributes: new { @class = "form-control", id = "txtDescripcion" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Stock</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.pStock, htmlAttributes: new { @class = "form-control", id = "txtStock" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Precio</label>
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.pPrecio, htmlAttributes: new { @class = "form-control", id = "txtPrecio" })
+                    </div>
+                </div>
+                <div class="form-group"> <!--Esto para ViewModel-->
+                    <label class="col-sm-6 control-label">Tipo de instrumento</label> <!--Esto para ViewModel-->
+                    <div class="col-sm-6"> <!--Esto para ViewModel-->
+                        @Html.DropDownList("idTipo", items, "Seleccione el tipo de instrumento", htmlAttributes: new { @class = "form-control" }) <!--Esto para ViewModel-->
+                    </div> <!--Esto para ViewModel-->
+                </div> <!--Esto para ViewModel-->
+                <div class="form-group text-right">
+                    <div class="col-xs-12">
+                        <button class="btn btn-primary" type="submit">
+                            Guardar instrumento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

@@ -117,17 +117,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoDeDatos\AD_Instrumento.cs" />
+    <Compile Include="AccesoDeDatos\AD_EliminarInstrumento.cs" />
+    <Compile Include="AccesoDeDatos\AD_ListadoInstrumento.cs" />
+    <Compile Include="AccesoDeDatos\AD_NuevoInstrumento.cs" />
+    <Compile Include="AccesoDeDatos\AD_Reporte.cs" />
+    <Compile Include="AccesoDeDatos\AD_TipoInstrumentoVM.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EliminarInstrumentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstrumentoController.cs" />
+    <Compile Include="Controllers\NuevoInstrumentoController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Instrumento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\InstrumentoItemVM.cs" />
+    <Compile Include="ViewModels\ReporteVM.cs" />
+    <Compile Include="ViewModels\TipoItemVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -166,6 +176,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Instrumento\ListadoInstrumentos.cshtml" />
+    <Content Include="Views\NuevoInstrumento\NuevoInstrumento.cshtml" />
+    <Content Include="Views\EliminarInstrumento\EliminarInstrumento.cshtml" />
+    <Content Include="Views\Reporte\ReporteInstrumento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
