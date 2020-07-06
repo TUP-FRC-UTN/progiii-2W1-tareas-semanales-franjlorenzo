@@ -20,7 +20,7 @@ namespace ABM_Persona.AccesoDeDatos
             {
                 SqlCommand comando = new SqlCommand();
                 string consulta = @"SELECT p.id, p.nombre, p.apellido, p.edad, p.telefono, s.nombre 'Sexo'
-                                    from Persona p join Sexo s on p.idSexo = s.id";
+                                    from Persona p join Sexo s on p.idSexo = s.idSexo";
                 comando.Parameters.Clear();
 
                 comando.CommandType = System.Data.CommandType.Text;
@@ -68,7 +68,7 @@ namespace ABM_Persona.AccesoDeDatos
             {
                 SqlCommand comando = new SqlCommand();
                 string consulta = @"SELECT s.nombre 'Sexo', count(*) 'Cantidad'
-                                    from Sexo s join Persona p on p.idSexo = s.id
+                                    from Sexo s join Persona p on p.idSexo = s.idSexo
                                     group by s.nombre";
                 comando.Parameters.Clear();
 

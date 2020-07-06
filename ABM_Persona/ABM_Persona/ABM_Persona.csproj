@@ -117,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDeDatos\AccesoDatos_ActualizarPersona.cs" />
     <Compile Include="AccesoDeDatos\AccesoDatos_EliminarPersona.cs" />
     <Compile Include="AccesoDeDatos\AccesoDatos_Persona.cs" />
     <Compile Include="AccesoDeDatos\AccesoDatos_PersonaListado.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ActualizarPersonaController.cs" />
     <Compile Include="Controllers\EliminarPersonaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListadoPersonaController.cs" />
@@ -177,6 +179,7 @@
     <Content Include="Views\ListadoPersona\ListadoPersona.cshtml" />
     <Content Include="Views\EliminarPersona\EliminarPersona.cshtml" />
     <Content Include="Views\Reporte\ReportePersona.cshtml" />
+    <Content Include="Views\ActualizarPersona\ActualizarPersona.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

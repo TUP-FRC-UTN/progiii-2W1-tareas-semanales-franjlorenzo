@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ABM_Persona.Models.Persona>
+﻿ @model IEnumerable<ABM_Persona.Models.Persona>
 @{
     ViewBag.Title = "ListadoPersona";
 }
@@ -51,6 +51,7 @@
                         </td>
                         <td>
                             <a href="@Url.Action("EliminarPersona", "EliminarPersona", new {@idPersona = persona.Id})" class="btn btn-danger">Eliminar</a>
+                            <a href="@Url.Action("ActualizarPersona", "ActualizarPersona", new {@idPersona = persona.Id})" class="btn btn-warning">Actualizar</a>
                         </td>
                     </tr>
                 }
